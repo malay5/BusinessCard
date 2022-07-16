@@ -160,3 +160,7 @@ width: 115px;
 display: block;
 text-align: center;
 margin: 0 auto;}
+
+li a{
+    all:unset;
+}
