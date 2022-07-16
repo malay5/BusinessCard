@@ -135,6 +135,22 @@ i{
         
         
     }
+    
+    .front{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index:2;
+        /* transform: rotateY(0deg); */
+        transform:rotateY(-180deg);
+    
+    }
+    .back{
+        /* transform:rotateY(-180deg); */
+        transform: rotateY(0deg);
+        font-family: 'Arimo', sans-serif;
+    }
+    
     .card{
         height:100%;
         width:100%;
