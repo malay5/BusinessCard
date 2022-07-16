@@ -10,8 +10,9 @@ body{
     height:100vh;
 }
 .container{
-    height:340px;
+    height:50%;
     width:600px;
+    /* width:50%; */
     margin:0 auto;
     position: relative;
     display:flex;
@@ -20,8 +21,8 @@ body{
 }
 
 .card{
-    height:340px;
-    width:600px;
+    height:100%;
+    width:100%;
     box-shadow: 0 27px 55px 0 rgba(0, 0, 0, .7), 0 17px 17px 0 rgba(0, 0, 0, .5);
     position:relative;
     transform:rotate(0deg);
@@ -46,12 +47,12 @@ body{
     justify-content:center;
     z-index:2;
     transform: rotateY(0deg);
-/*     transform:rotateY(-180deg); */
+    /* transform:rotateY(-180deg); */
 
 }
 .back{
     transform:rotateY(-180deg);
-/*     transform: rotateY(0deg); */
+    /* transform: rotateY(0deg); */
     font-family: 'Arimo', sans-serif;
 }
 
@@ -131,32 +132,31 @@ i{
 @media only screen and  (max-width:700px){
     
     .container{
-        transform:rotate(90deg);
         
+        width:600px;
         
     }
-    
-    .front{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        z-index:2;
-        /* transform: rotateY(0deg); */
-        transform:rotateY(-180deg);
-    
-    }
-    .back{
-        /* transform:rotateY(-180deg); */
-        transform: rotateY(0deg);
-        font-family: 'Arimo', sans-serif;
-    }
-    
     .card{
         height:100%;
-        width:100%;
-    }
-    .card h1{
-        font-size:2rem;
+        width:600px;
+        transform:rotate(90deg) translateX;
     }
     
 }
+
+@media only screen and  (max-width:600px){
+    
+    .container{
+        /* transform:rotate(90deg); */
+        width:600px;    
+        
+    }
+    
+    
+    
+}
+.profilepic{
+width: 115px;
+display: block;
+text-align: center;
+margin: 0 auto;}
