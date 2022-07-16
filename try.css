@@ -62,6 +62,11 @@ body{
     cursor:pointer;
 }
 
+.container:active .card{
+    transform:rotateY(180deg) translateX(100%);
+    cursor:pointer;
+}
+
 ul{
     list-style:none;
     width:100%;
