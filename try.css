@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    box-sizing:border-box;
+    padding:0;
+}
+body{
+    margin:0;
+    display:flex;
+    align-items:center;
+    height:100vh;
+}
+.container{
+    height:340px;
+    width:600px;
+    margin:0 auto;
+    position: relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.card{
+    height:340px;
+    width:600px;
+    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, .7), 0 17px 17px 0 rgba(0, 0, 0, .5);
+    position:relative;
+    transform:rotate(0deg);
+    transform-origin: 100% 0%;
+    transition:0.8s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.front,.back{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:white;
+    backface-visibility: hidden;
+}
+
+.front{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:2;
+    /* transform: rotateY(0deg); */
+    transform:rotateY(-180deg);
+
+}
+.back{
+    /* transform:rotateY(-180deg); */
+    transform: rotateY(0deg);
+    font-family: 'Arimo', sans-serif;
+}
+
+
+
+.container:hover .card{
+    transform:rotateY(180deg) translateX(100%);
+    cursor:pointer;
+}
+
+ul{
+    list-style:none;
+    width:100%;
+    margin:0;
+    position:absolute;
+    bottom:30px;
+    left:0;
+    padding:0 1%;
+}
+
+ul:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+li{
+    float:left;
+    width:31%;
+    padding:10px;
+    border:2px solid #FC5135;
+    text-align:center;
+    border-radius: 4px;
+    margin:0 1%;
+    position:relative;
+    color:#4E203C;
+}
+
+li:before{
+    position: absolute;
+    top:-50%;
+    left:50%;
+    margin-left:-15px;    
+    width:30px;
+    height:30px;
+    background:#FC5135;
+    color:white;
+    line-height:30px;
+    text-align: center;
+    border-radius: 50%;
+    font-family: FontAwesome;
+       
+}
+
+li:nth-child(1):before {content: "\f095"}
+li:nth-child(2):before {content: "\f003"}
+li:nth-child(3):before {content: "\f0c1"}
+
+h1 span{
+    display:block;
+}
+
+h1{
+    text-align:center;
+    padding-top:30px;
+}
+i{
+    font-family: 'Playfair Display',serif;
+
+}
+
+@media only screen and  (max-width:700px){
+    
+    .container{
+        transform:rotate(90deg);
+        
+        
+    }
+    .card{
+        height:100%;
+        width:100%;
+    }
+    .card h1{
+        font-size:2rem;
+    }
+    
+}
